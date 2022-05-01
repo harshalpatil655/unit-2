@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select>
+        <option id="india" value="Asia">India</option>
+        <option id="usa" value="North America">United States of America</option>
+        <option id="china" value="Asia">China</option>
+        <option id="nepal" value="Asia">Nepal</option>
+        <option id="australia" value="Australia">Australia</option>
+        <option id="france" value="Europe">France</option>
+        <option id="germany" value="Europe">Germany</option>
+        <option id="southAfrica" value="Africa">South Africa</option>
+        <option id="nigeria" value="Africa">Nigeria</option>
+        <option id="northAmerica" value="North America">North America</option>
+        <option id="argentina" value="South America">Argentina</option>
+        <option id="brazil" value="South America">Brazil</option>
+        <option id="canada" value="North America    ">Canada</option>
+        <option id="Singapore" value="Asia">Singapore</option>
+        <option id="Sweden" value="Europe">Sweden</option>
+    </select>
+    <button>Check For Continent</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click",hulk);
+
+    function hulk(){
+        var hola=document.querySelector("select").value;
+        alert(hola);
+    }
+</script>

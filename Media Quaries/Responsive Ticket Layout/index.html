@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #topbox>div>h1{
+            height:100px;
+            width:32%;
+            margin: auto;
+            text-align: center;
+        }
+        #topbox>div>p{
+            height:100px;
+            width:40%;
+            margin: auto;
+            text-align: center;
+            color:#909090
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            gap:20px;
+            width:60%;
+            margin:auto;
+            text-align: center;
+            padding-top:20px;
+
+            
+        }
+        #container>div{
+            border:1px solid red;
+            box-sizing: border-box;
+        }
+        #container p{
+            font-size: 20px;
+            color:#909090
+        }
+        button{
+            color:blue;
+            background-color: white;
+            border:1px solid blue;
+            padding:10px 15px 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+
+        }
+        button:hover{
+            background-color: blue;
+            color:white
+        }
+        @media all and (min-width:421px) and (max-width:765px){
+            #topbox>div>h1{
+                width:85%;
+            }
+            #topbox{
+                width:85%;
+            }
+            #container{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        @media all and (min-width:81px) and (max-width:420px){
+            #topbox{
+                width:85%;
+            }
+            #topbox{
+                width:85%;
+            }
+            #container{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        #green{
+            color:green
+        }
+        #orange{
+            color:orange
+        }
+        #blue{
+            color:blue;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="topbox">
+        <div><h1>Choose a plan that right for your Business</h1></div>
+        <div>
+            <p>We collect reviews from our usesrs so that you can
+                get honest opnion of what an experiencewith our website 
+                are really like!</p>
+        </div>
+    </div>
+    <div id="container">
+        <div>
+            <h2>Starter Plan</h2>
+            <h1 id="green">Free</h1>
+            <i>per month</i>
+            <p>We collect reviews from our usesrs so that you can
+                get honest opnion of what an experiencewith our website 
+                are really like!
+            </p>
+            <button>Start Now</button>
+
+        </div>
+        <div>
+            <h2>Business Plan</h2>
+            <h1 id="orange">$39.00</h1>
+            <i>per month</i>
+            <p>We collect reviews from our usesrs so that you can
+                get honest opnion of what an experiencewith our website 
+                are really like!
+            </p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Premium Plan</h2>
+            <h1 id="blue">$59.00</h1>
+            <i>per month</i>
+            <p>We collect reviews from our usesrs so that you can
+                get honest opnion of what an experiencewith our website 
+                are really like!
+            </p>
+            <button>Start Now</button>
+        </div>
+    </div>
+    
+</body>
+</html>

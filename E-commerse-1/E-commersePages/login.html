@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form>
+        <input id="email" type="email" placeholder="Enter Email">
+        <input id="password" type="password" placeholder="Enter Password">
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+<script>
+    var storeData=JSON.parse(localStorage.getItem("userData"))
+
+    document.querySelector("form").addEventListener("submit",hulk);
+    
+    function hulk(){
+        event.preventDefault();
+
+        var enteredemail=document.querySelector("#email").value;
+        var enteredpassword=document.querySelector("#password").value
+         
+
+       for(var i=0;i<storeData.length;i++)
+       {
+           if(storeData[i].email==enteredemail  && storeData[i].password==enteredpassword )
+           {
+                alert("Login Successful");
+                window.location.href="men.html";
+                break;
+               
+           }
+           else{
+               alert("Login Failed");
+               
+           }
+       } 
+
+    }
+</script>

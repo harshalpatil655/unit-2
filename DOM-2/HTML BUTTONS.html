@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns: repeat(9,auto);
+            grid-template-rows: repeat(1,auto);
+            gap:10px;
+            margin-top:250px ;
+        }
+        #container>div{
+            height:70px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            font-size: 30px;
+        }
+
+        #container>div:nth-child(1){
+            background-color:#037aff;
+            color:white
+
+        }
+        #container>div:nth-child(2){
+            background-color:#6d747d;
+            color:white
+
+        }
+        #container>div:nth-child(3){
+            background-color:#27a743;
+            color:white
+
+        }
+        #container>div:nth-child(4){
+            background-color:#db3445;
+            color:white
+
+        }
+        #container>div:nth-child(5){
+            background-color:#fec006;
+            color:black;
+
+        }
+        #container>div:nth-child(6){
+            background-color:#12a2b8;
+            color:white
+
+        }
+        #container>div:nth-child(7){
+            background-color:#e7ecec;
+            color:black
+
+        }#container>div:nth-child(8){
+            background-color:#34393f;
+            color:white
+
+        }
+        
+        #container>div:nth-child(9){
+            background-color:#f4f6f6;
+            color:blue
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>Primary</div>
+        <div>Secondary</div>
+        <div>Success</div>
+        <div>Danger</div>
+        <div>Warning</div>
+        <div>Info</div>
+        <div>Light</div>
+        <div>Dark</div>
+        <div>Link</div>
+    </div>
+</body>
+</html>

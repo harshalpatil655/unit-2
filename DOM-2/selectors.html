@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button>Change H1</button>
+        <button id="h3">Change H3</button>
+        <button id="h5">Change H5</button>
+        <button id="leaf">Change Green</button>
+        <button id="blood">Change Red</button>
+        <button id="sky">Change Blue</button>
+        <script>
+        </script>
+    </body>
+</html>
+
+<script>
+  document.querySelector("button").addEventListener("click",colourred);
+  function colourred(){
+      document.querySelector("h1").style.color="red";
+  }
+
+  document.querySelector("#h3").addEventListener("click",colourgreen);
+  function colourgreen(){
+    //   document.querySelectorAll("h3").style.color="green";
+    var h3s=document.querySelectorAll("h3");
+    for(var i=0;i<h3s.length;i++)
+    {
+        h3s[i].style.color="green";
+
+    }
+} 
+document.querySelector("#h5").addEventListener("click",colourblue);
+function colourblue(){
+    var h5s=document.querySelectorAll("h5");
+    for(var i=0;i<h5s.length;i++)
+    {
+        h5s[i].style.color="blue";
+    }
+}
+
+document.querySelector("#leaf").addEventListener("click",hulk);
+
+function hulk(){
+    var greens=document.querySelectorAll(".green");
+
+    for(var i=0;i<greens.length;i++)
+    {
+        greens[i].style.color="green";
+    }
+}
+
+
+document.querySelector("#sky").addEventListener("click",sea);
+
+function sea(){
+    var blues=document.querySelectorAll(".blue");
+    for(var i=0;i<blues.length;i++)
+    {
+        blues[i].style.color="blue";
+    }
+}
+
+document.querySelector("#blood").addEventListener("click",soil);
+
+function soil(){
+    var reds=document.querySelectorAll(".red");
+
+    for(var i=0;i<reds.length;i++)
+    {
+        reds[i].style.color="red";
+    }
+}
+</script>

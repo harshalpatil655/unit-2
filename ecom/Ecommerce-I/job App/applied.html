@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="applied.html">Applied Jobs</a></div>
+      <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Job applied</th>
+            <th>Add to bookmark</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+  <script>
+        //you need to code here
+        var appliedJobs = JSON.parse(localStorage.getItem("jobApplications"))
+        console.log(appliedJobs)
+
+        var bookmarks=JSON.parse(localStorage.getItem("bookmarksObj"))||[]
+
+        appliedJobs.map(function(elem){
+
+          var row= document.createElement("tr")
+
+          var td1= document.createElement("td")
+          td1.innerText=elem.name
+
+          var td2= document.createElement("td")
+          td2.innerText=elem.email
+
+          var td3= document.createElement("td")
+          td3.innerText=elem.role
+
+          var td4= document.createElement("td")
+          td4.innerText="Bookmark"
+          td4.style.color="blue"
+          td4.style.cursor="pointer"
+
+          td4.addEventListener("click",function(){
+            addToBookmark(elem)
+          })
+
+          row.append(td1,td2,td3,td4)
+
+          document.querySelector("tbody").append(row)
+        })
+
+        function addToBookmark(elem){
+          console.log(elem)
+          bookmarks.push(elem)
+          localStorage.setItem("bookmarksObj",JSON.stringify(bookmarks))
+        }
+  </script>
+</html>
+
+

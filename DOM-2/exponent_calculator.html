@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="A" type="number" placeholder="Enter value of a">
+    <input id="B" type="number" placeholder="Enter value of b">
+    <button id="value1">value of a*b</button>
+
+   <p></p>
+    <input id="num1" type="number" placeholder="Enter num1">
+    <input id="num2" type="number" placeholder="Enter num2">
+    <button id="value2">Click here to find the exponent!</button>
+    <p id="lastValue"></p>
+</body>
+</html>
+
+<script>
+    document.querySelector("#value1").addEventListener("click",productalert);
+
+    function productalert(){
+        var firstValue=document.querySelector("#A").value;
+        var secondValue=document.querySelector("#B").value;
+        var finalValue=eval(firstValue*secondValue);
+        alert(document.querySelector("#value1").value=finalValue) 
+    }
+
+    document.querySelector("#value2").addEventListener("click",squ);
+
+    function squ(){
+        var oneValue=document.querySelector("#num1").value;
+        var twoValue=document.querySelector("#num2").value;
+        var finalo=1;
+        for(var i=0;i<twoValue;i++)
+        {
+             finalo=eval(finalo*oneValue);
+        } 
+         
+         document.querySelector("#lastValue").innerText=finalo;
+    }
+
+    
+    
+</script>

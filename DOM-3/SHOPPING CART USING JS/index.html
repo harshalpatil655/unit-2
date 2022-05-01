@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap:20px;
+            text-align: center;
+            padding: 30px;
+           
+           
+        }
+        #container>div{
+           
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
+        .pic{
+            width:100%
+        }
+        #meriid{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        p{
+            text-decoration-line: line-through;
+            font-size: 20px;
+            color:gray;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+
+<script>
+    var dataObj=[{imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"},
+        { imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"},
+        {imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"},
+        {imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"}];
+
+        dataObj.map(function(ele,index,arr){
+
+            var box=document.createElement("div");
+
+
+            var img=document.createElement("img");
+            img.setAttribute("class","pic");
+            img.src=ele.imgUrl;
+            box.append(img);
+
+            var name1=document.createElement("h3");
+            name1.innerText=ele.name;
+            box.append(name1);
+
+            var box2=document.createElement("div");
+            box2.setAttribute("id","meriid")
+
+            
+            var price1=document.createElement("h1");
+            price1.innerText=ele.price;
+            
+
+            var off=document.createElement("p");
+            off.innerText=ele.strikedOffPrice;
+            box2.append(price1,off);
+            box.append(box2);
+
+            document.querySelector("#container").append(box);
+
+        })
+</script>

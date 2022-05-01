@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    var infoObj=[{name1:"Vijay Sekhar Sharma",role:"Founder & CEO",photo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+    {name1:"Kunal Shah",role:"Founder",photo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"},
+    {name1:"Amerish Rau",role:"CEO",photo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png"},
+    {name1:"Sampad Swain",role:"Co-Founder & CEO",photo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png"}
+    ];
+
+
+    infoObj.map(function(ele,index,arr){
+
+        var box=document.createElement("div");
+
+        var pic=document.createElement("img");
+        pic.setAttribute("class","photo");
+        pic.src=ele.photo;
+        box.append(pic);
+
+        var head2=document.createElement("h2");
+        head2.setAttribute("class","headname");
+        head2.innerText=ele.name1;
+        box.append(head2);
+
+        var role1=document.createElement("p");
+        role1.setAttribute("class","role");
+        role1.innerText=ele.role;
+        box.append(role1);
+
+        var sym=document.createElement("img");
+        sym.setAttribute("class","logo");
+        sym.src=ele.logo;
+        box.append(sym);
+
+
+        
+
+        document.querySelector("#container").append(box);
+
+
+
+    })
+
+
+</script>

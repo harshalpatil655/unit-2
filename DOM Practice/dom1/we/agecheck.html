@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="ip" type="number" placeholder="Enter Age"/>
+    <button>Check Eligibility</button>
+    <p>Your Output is Shown here</p>
+</body>
+</html>
+
+<script>
+    
+    document.querySelector("button").addEventListener("click",myfunction)
+
+    function myfunction(){
+        
+        document.querySelector("p").innerText="You can drive if your age is greator than 18";
+    }
+</script>

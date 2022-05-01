@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Checkout Page</h1>
+    <form id="container">
+        <h1>hello</h1>
+        <input id="CardNo" type="number" placeholder="Enter CardNumber"/>
+        <input id="cvv" type="number" placeholder="Enter CVV">
+        <input id="otp" type="number" placeholder="Enter OTP">
+        <button><a href="otp.html">Get OTP here</a></button>
+        <input type="submit">
+       
+    </form>
+</body>
+</html>
+
+<script>
+       document.querySelector("#container").addEventListener("submit",hulk);
+
+function hulk(){
+       
+    event.preventDefault();
+    console.log("hey buddy")
+        var cardnumber=document.querySelector("#CardNo").value;
+        var Cvv=document.querySelector("#cvv").value;
+        var Otp=document.querySelector("#otp").value;
+        
+        if(cardnumber=="4545123" && Cvv=="321" && Otp=="12345")
+        {
+            alert("Order Placed Successful & Payment Successful");
+        }
+        else{
+            alert("Order Placed Failed");
+        }
+
+       
+        
+    }
+        
+</script>

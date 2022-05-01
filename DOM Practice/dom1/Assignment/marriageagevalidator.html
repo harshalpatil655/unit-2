@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gender{
+            background-color: aqua
+        }
+        #one{
+            color:blue
+        }
+        #two{
+            color:rgb(185, 10, 185)
+        }
+    </style>
+</head>
+<body>
+    <input id="one" type="text" placeholder="Enter Name">
+    <input id="two" type="number" placeholder="Enter Age">
+    <select  id="gender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    <p id="three"></p>
+    <button>Check Eligibility</button>
+</body>
+</html>
+
+<script>
+    
+    document.querySelector("button").addEventListener("click",hulk);
+
+    function hulk(){
+    var hola=document.querySelector("#two").value;
+    if(hola>=18)
+    {
+        document.querySelector("#three").innerText="Eligible For Marriage"
+    }
+    else{
+        document.querySelector("#three").innerText="Not Eligible For Marriage"
+    }
+
+
+
+    }
+</script>

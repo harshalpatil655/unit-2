@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="Gender" id="">
+        <option >Gender</option>
+        <option >Male</option>
+        <option >Female</option>
+    </select>
+    <input id="hola" type="number" placeholder="Enter Birthdate" value="">
+    <button onclick="checkvalid()">check validation</button>
+    <p id="out">Your validation is Shown Here fill above information</p>
+</body>
+</html>
+
+<script>
+    
+    function checkvalid(){
+        var age=document.getElementById("hola").value;
+        if(age<2001)
+        {
+            alert(document.getElementById("out").innerText="You Are Valid")
+        }
+        else{
+            alert(document.getElementById("out").innerText="You Are Not Valid")
+        }
+    }
+
+</script>

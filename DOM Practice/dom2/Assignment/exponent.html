@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="A" type="number" placeholder="Enter A"/>
+    <input id="B" type="number" placeholder="Enter B"/>
+    <button>Check Product</button>
+    <button id="butn">Click here to find Exponent!</button>
+    <input id="C" type="number" placeholder="Enter num1"/>
+    <input id="D" type="number" placeholder="Enter num2"/>
+</body>
+</html>
+<script>
+  
+    document.querySelector("button").addEventListener("click",hulk)
+
+    function hulk(){
+        var hola1=document.querySelector("#A").value;
+        var hola2=document.querySelector("#B").value;
+        var product=(hola1*hola2);
+        alert(product)
+    }
+
+    document.querySelector("#butn").addEventListener("click",hulk1)
+
+    function hulk1(){
+        var hola3=document.querySelector("#C").value;
+        var hola4=document.querySelector("#D").value;
+        var product1=1;
+        for(var i=0;i<hola4;i++)
+        {
+            product1=eval(product1*hola3);
+        }
+        alert(product1);
+
+    }
+    
+</script>

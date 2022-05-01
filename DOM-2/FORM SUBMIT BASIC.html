@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="basicform">
+        <input id="name1" type="text" placeholder="Enter Name">
+        <input id="age" type="number" placeholder="Enter Age">
+        <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input id="email"  type="email" placeholder="Enter Email">
+        <input id="Mobi" type="number" placeholder="Enter Mobile Number">
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+<script>
+    document.querySelector("#basicform").addEventListener("submit",hulk);
+
+    function hulk(){
+        event.preventDefault();
+        var name2=document.querySelector("#name1").value;
+        var age1=document.querySelector("#age").value;
+        var gender1=document.querySelector("#gender").value;
+        var email1=document.querySelector("#email").value;
+        var mobile1=document.querySelector("#Mobi").value;
+
+        console.log(name2,age1,gender1,email1,mobile1);
+
+    }
+</script>

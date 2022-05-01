@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="one" type="text" placeholder="Enter Name"/>
+        <input id="two" type="number" placeholder="Enter Age"/>
+        <select id="three">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input id="four" type="email" placeholder="Enter Email"/>
+        <input id="five" type="number" placeholder="Enter Mobile Number"/>
+        <input type="submit"/>
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",hulk);
+
+    function hulk(){
+        event.preventDefault();
+
+        var hola1=document.querySelector("#one").value;
+        var hola2=document.querySelector("#two").value;
+        var hola3=document.querySelector("#three").value;
+        var hola4=document.querySelector("#four").value;
+        var hola5=document.querySelector("#five").value;
+
+        console.log(hola1,hola2,hola3,hola4,hola5);
+
+
+
+    }
+</script>

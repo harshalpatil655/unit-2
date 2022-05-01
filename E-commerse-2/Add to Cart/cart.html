@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            gap:40px
+        }
+    </style>
+</head>
+<body>
+     <p></p>
+     <input id="discount" type="text" placeholder="Enter PromoCode">
+      
+    
+     <button id="btn">Apply PromoCode</button>
+
+    <h1>Cart Page</h1>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+    var cartData=JSON.parse(localStorage.getItem("cart"));
+
+    var total=cartData.reduce(function(sum,ele,index,arr){
+        return sum+ele.price;
+    }, 0);
+    
+
+    document.querySelector("p").innerText=`total is Rs ${total}`;
+
+    document.querySelector("#btn").addEventListener("click",hulk);
+
+    function hulk(){
+
+      var discount=document.querySelector("#discount").value;
+      if(discount=="masai30")
+      {
+        
+        document.querySelector("p").innerText=`total is Rs ${total-((total*30)/100)}`;
+      }
+    }
+
+   
+cartData.map(function(ele,index){
+
+var box=document.createElement("div");
+
+var img=document.createElement("img");
+img.src=ele.image_url;
+
+
+var name=document.createElement("p");
+name.innerText=ele.name;
+
+
+var price=document.createElement("p");
+price.innerText=ele.price;
+
+var butn=document.createElement("button");
+butn.innerText="Remove"
+butn.addEventListener("click",function(){
+  remove(ele,index)
+})
+
+
+
+
+
+box.append(img,name,price,butn);
+document.querySelector("#container").append(box)
+})
+
+function remove(ele,index){
+
+  cartData.splice(index,1);
+  localStorage.setItem("cart",JSON.stringify(cartData));
+  window.location.reload();
+}
+
+
+
+
+
+    
+</script>

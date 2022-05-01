@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainbox{
+            height:100px;
+            width:80%;
+            border:1px solid red;
+            display:flex;
+            
+        }
+        .mainbox>div{
+            height:80%;
+            width:50%;
+            border:1px solid blue;
+            display:flex
+            
+        }
+        .mainbox>div>.tab{
+            height:80%;
+            width:20%;
+            border:1px solid red;
+            justify-content: space-between;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <div><h1>MEGAWIDTH</h1></div>
+        <div>
+            <div class="tab"><p>hi</p></div>
+            <div class="tab"><p>gfgh</p></div>
+            <div class="tab"><p>dyf</p></div>
+            <div class="tab"><select>page</select></div>
+        </div>
+    </div>
+</body>
+</html>

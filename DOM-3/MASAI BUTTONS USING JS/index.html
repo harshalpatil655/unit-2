@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+<script>
+var buttonobj=[
+{innerText:"Primary",bgcolor:"blue",color:"white"},
+{innerText:"Secondary",bgcolor:"gray",color:"white"},
+{innerText:"Success",bgcolor:"green",color:"white"},
+{innerText:"Danger",bgcolor:"red",color:"white"},
+{innerText:"Warning",bgcolor:"cyan",color:"black"},
+{innerText:"Info",bgcolor:"blue",color:"white"},
+{innerText:"Light",bgcolor:"gray",color:"black"},
+{innerText:"Dark",bgcolor:"black",color:"white"},
+{innerText:"Link",bgcolor:"white",color:"blue"}];
+
+
+
+buttonobj.map(function(ele,index,arr){
+  var butn=document.createElement("button");
+  butn.innerText=ele.innerText;
+  butn.style.backgroundColor=ele.bgcolor;
+  butn.style.color=ele.color;
+  butn.style.borderRadius="5px";
+  butn.style.border="0px";
+  butn.style.marginRight="20px"
+
+  document.querySelector("body").append(butn);
+
+})
+
+
+</script>
